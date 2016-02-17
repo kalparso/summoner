@@ -1,0 +1,45 @@
+{
+  "name": "vantagesports-lolanalytics",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "flux": "^2.1.1",
+    "history": "^1.17.0",
+    "keymirror": "^0.1.1",
+    "lodash": "^4.2.1",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "react-router": "^1.0.3"
+  },
+  "devDependencies": {
+    "babelify": "^6.1.2",
+    "browserify": "^10.2.4",
+    "envify": "^3.4.0",
+    "eslint": "^0.24.0",
+    "exorcist": "^0.4.0",
+    "node-sass": "^3.2.0",
+    "react-tools": "^0.13.3",
+    "reactify": "^1.1.1",
+    "uglify-js": "^2.4.23",
+    "watchify": "^3.2.3"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run build-css && npm run build-js",
+    "build-css": "node-sass --omit-source-map-url ./static/stylesheets/scss/ -o ./static/dist/css/",
+    "build-js": "browserify ./static/js/App.js -t [envify --NODE_ENV production] | uglifyjs -cm > static/dist/bundle.js",
+    "clean": "rm -f ./static/dist/bundle* ./static/dist/css/*",
+    "start": "npm run watch-css & npm run watch-js",
+    "watch-js": "watchify static/js/App.js -d -o 'exorcist static/dist/bundle.pre.js > static/dist/bundle.js' -v",
+    "watch-css": "node-sass -rw ./static/stylesheets/scss/ -o ./static/dist/css"
+  },
+  "browserify": {
+    "transform": [
+      "babelify",
+      "reactify",
+      "envify"
+    ]
+  },
+  "author": "Scott Snider",
+  "license": "ISC",
+  "description": ""
+}

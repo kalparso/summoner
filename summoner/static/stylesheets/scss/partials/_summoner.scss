@@ -1,0 +1,27 @@
+form.summoner-form {
+  padding-top: 40px;
+  width: 25%;
+  margin: 0 auto;
+
+  input.summoner-input {
+    width: 100%;
+    padding: 8px;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    background-color: #F5EEEE;
+    border: 1px solid #ccc;
+    font-size: 1em;
+  }
+
+  input.summoner-submit {
+    width: 100%;
+    font-size: 1em;
+  }
+
+  div.error {
+    color: red;
+  }
+}
+
+
