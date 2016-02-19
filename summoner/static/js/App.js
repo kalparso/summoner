@@ -9,9 +9,8 @@ import createBrowserHistory from 'history/lib/createBrowserHistory';
 
 import Header from './components/Header.react';
 import bodyText from './components/bodyText.react';
-import AddSummoner from './components/AddSummoner.react';
 import Footer from './components/Footer.react';
-
+import SummonerForm from './components/SummonerForm.react';
 
 
 var Shell = React.createClass({
@@ -36,6 +35,8 @@ var routes = (
 function startApp(endpoints) {
   var el = document.getElementById('react');
   ReactDOM.render(<Router history={history}>{routes}</Router>, el);
+  ReactDOM.render(<SummonerForm/>, document.getElementById('summonerFormTop'));
+  ReactDOM.render(<SummonerForm/>, document.getElementById('summonerFormBottom'));
 }
 
 startApp();

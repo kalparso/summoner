@@ -5,7 +5,7 @@ import React from 'react';
 export default React.createClass({
   render() {
     return (
-	<bodyText>
+	<bodyText>	
     <div className="top_banner">
 		<div className="container">
             <div className="table-div">
@@ -13,23 +13,13 @@ export default React.createClass({
                   <h1 className="heading">Train Like the Pros.</h1>
                   <p className="tagline">Vantage Sports analyzes every aspect of your game on an unrivaled level. <br /> Sign up for Vantage Sports <b>free</b> today to <br /> receive access to the only training platform endorsed by the pros.</p>
 				  <div className="form-div">
-                     <form>
-						<div className="form-group">
-							<input className="form-controls" type="text" placeholder="Summoner Name" />
-						</div>
-						<div className="form-group">
-							<input className="form-controls" type="text" placeholder="Email Address" />
-						</div>
-						<div className="btn-group">
-                           <button className="btn" type="submit">Sign up for free</button>
-                        </div>
-                     </form>
+					 <div id="summonerFormTop"></div>
 					 <p className="note">Vantage Sports provides a free analysis to all user who sign up.<br /> Additional charges will apply on a per-match basis.</p>
                   </div>
                </div>
             </div>
          </div>
-   </div>
+   	</div>
 	<div className="take-tour">
          <div className="container">
             <div className="take-t-inner">
@@ -75,17 +65,7 @@ export default React.createClass({
                   <a href=""><img src='/_dist/images/vantagesports_logo.svg' /></a>
                </div>
                <div className="form-div">
-                  <form>
-						<div className="form-group">
-							<input className="form-controls" type="text" placeholder="Summoner Name" />
-						</div>
-						<div className="form-group">
-							<input className="form-controls" type="text" placeholder="Email Address" />
-						</div>
-						<div className="btn-group">
-                           <button className="btn" type="submit">Sign up for free</button>
-                        </div>
-                     </form>
+                  <div id="summonerFormBottom"></div>
                   <p className="note"><span>Vantage Sports provides a free analysis to all user who sign up.</span><br /> Additional charges will apply on a per-match basis. </p>
                </div>
             </div>
@@ -95,7 +75,3 @@ export default React.createClass({
     );
   },
 });
-
-
-
-
