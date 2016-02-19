@@ -1,0 +1,13 @@
+*~
+*.pyc
+**/.DS_Store
+
+# Node modules and build artifacts
+**/npm-debug.log
+.jshintrc
+
+# Node modules
+/node_modules
+
+# JS Bundles and compiled CSS
+**/static/dist/bundle*.js
