@@ -14,9 +14,10 @@ form.summoner-form {
   form.summoner-form input.summoner-submit {
     width: 100%;
     font-size: 1em; }
-  form.summoner-form div.error {
-    color: red; }
+
+div.error {
+  color: red; }
 
 body {
   min-width: 750px;
-  /*font-family: 'Source Sans Pro', sans-serif;*/ }
+  font-family: 'Source Sans Pro', sans-serif; }
