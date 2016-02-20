@@ -8,7 +8,7 @@ import ReactDOM from 'react-dom';
 import createBrowserHistory from 'history/lib/createBrowserHistory';
 
 import Header from './components/Header.react';
-import bodyText from './components/bodyText.react';
+import BodyText from './components/BodyText.react';
 import Footer from './components/Footer.react';
 import SummonerForm from './components/SummonerForm.react';
 
@@ -29,7 +29,7 @@ let history = createBrowserHistory();
 
 var routes = (
   <Route path='/' component={Shell}>
-    <IndexRoute component={bodyText} />
+    <IndexRoute component={BodyText} />
   </Route>);
 
 function startApp(endpoints) {

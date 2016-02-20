@@ -26,14 +26,14 @@ function dispatchResult(successKey, callback) {
 
 export default {
 
-  getSummoner(summonerName, messageCallback) {
+  getSummoner(summonerName, summonerEmail, messageCallback) {
     setTimeout(function() {
       var key = ActionTypes.SUMMONER_PENDING;
       abortPendingRequests(key);
       dispatch(key);
 
       var callback = dispatchResult(ActionTypes.SUMMONER_RECEIVED, messageCallback);
-      _pending[key] = getSummoner(summonerName, callback);
+      _pending[key] = getSummoner(summonerName, summonerEmail, callback);
     }, 0);
   },  
 

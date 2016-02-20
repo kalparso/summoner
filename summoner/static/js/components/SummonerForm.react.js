@@ -42,7 +42,10 @@ export default React.createClass({
     var summonerName = this.refs.summonerName.value;
     var summonerEmail = this.refs.summonerEmail.value;
     el = this;
-    request.post('https://api-staging.vantagesports.com/summoners/v1/registerSummoner')
+      
+    getSummoner(summonerName, summonerEmail, this._summonerResponseReceived);
+    
+    /*request.post('https://api-staging.vantagesports.com/summoners/v1/registerSummoner')
         .send({ summoner_name: summonerName, email: summonerEmail, region:'na' })
         .set('Accept', 'application/json')
         .end(function(err, res){
@@ -54,10 +57,24 @@ export default React.createClass({
                       }
                       el.setState({pending: false, resultMessage: resultMessage});
                       $(".form-controls").val("");
-                    });
+                    });*/
     
     
     this.setState({pending: true, resultMessage: ''});
-  }
+  },
+
+  _summonerResponseReceived(success) {
+    if (success) { 
+    	
+    	this.setState({pending: false, resultMessage: 'Your request has been received successfully'}); 
+    	
+    	$(".form-controls").val("");
+    	
+    } else {
+    
+    	this.setState({pending: false, resultMessage: 'Some error has been occurred while submitting your request, Please try again later.'}); 
+    
+    }
+  },
 
 });
