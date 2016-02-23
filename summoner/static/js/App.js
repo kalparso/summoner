@@ -10,17 +10,17 @@ import createBrowserHistory from 'history/lib/createBrowserHistory';
 import Header from './components/Header.react';
 import BodyText from './components/BodyText.react';
 import Footer from './components/Footer.react';
-import SummonerForm from './components/SummonerForm.react';
+//import SummonerForm from './components/SummonerForm.react';
 
 
 var Shell = React.createClass({
   render() {
     return (
-      <body>
+      <div>
         <Header />
         {this.props.children}
         <Footer />
-      </body>
+      </div>
     );
   },
 });
@@ -61,8 +61,8 @@ function startApp(endpoints) {
   //   },
 
   // });
-  ReactDOM.render(<SummonerForm/>, document.getElementById('summonerFormTop'));
-  ReactDOM.render(<SummonerForm/>, document.getElementById('summonerFormBottom'));
+  //ReactDOM.render(<SummonerForm/>, document.getElementById('summonerFormTop'));
+  //ReactDOM.render(<SummonerForm/>, document.getElementById('summonerFormBottom'));
 }
 
 startApp();

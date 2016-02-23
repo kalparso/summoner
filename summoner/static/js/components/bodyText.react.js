@@ -1,6 +1,7 @@
 'use strict';
 
 import React from 'react';
+import SummonerForm from './SummonerForm.react';
 
 export default React.createClass({
   render() {
@@ -13,7 +14,9 @@ export default React.createClass({
                   <h1 className="heading">Train Like the Pros.</h1>
                   <p className="tagline">Vantage Sports analyzes every aspect of your game on an unrivaled level. <br /> Sign up for Vantage Sports <b>free</b> today to <br /> receive access to the only training platform endorsed by the pros.</p>
 				  <div className="form-div">
-					 <div id="summonerFormTop"></div>
+					 <div id="summonerFormTop">
+					 	<SummonerForm />
+					 </div>
 					 <p className="note">Vantage Sports provides a free analysis to all user who sign up.<br /> Additional charges will apply on a per-match basis.</p>
                   </div>
                </div>
@@ -65,7 +68,9 @@ export default React.createClass({
                   <a href=""><img src='/_dist/images/vantagesports_logo.svg' /></a>
                </div>
                <div className="form-div">
-                  <div id="summonerFormBottom"></div>
+                  <div id="summonerFormBottom">
+                  		<SummonerForm />
+                  </div>
                   <p className="note"><span>Vantage Sports provides a free analysis to all user who sign up.</span><br /> Additional charges will apply on a per-match basis. </p>
                </div>
             </div>

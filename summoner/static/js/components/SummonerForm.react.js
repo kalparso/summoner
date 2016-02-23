@@ -66,9 +66,13 @@ export default React.createClass({
   _summonerResponseReceived(success) {
     if (success) { 
     	
+    	this.refs.summonerName.value = "";
+    	
+    	this.refs.summonerEmail.value = "";
+    	
     	this.setState({pending: false, resultMessage: 'Your request has been received successfully'}); 
     	
-    	$(".form-controls").val("");
+    	//$(".form-controls").val("");
     	
     } else {
     
