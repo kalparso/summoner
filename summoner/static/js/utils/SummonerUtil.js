@@ -57,3 +57,12 @@ function handleResponse(callback) {
     callback(result);
   };
 }
+
+function safeJSONParse(str) {
+  var res;
+  if (!str) return;
+  try {
+    res = JSON.parse(str);
+  } catch (err) {}
+  return res;
+}

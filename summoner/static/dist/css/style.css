@@ -3,6 +3,7 @@ a:hover{text-decoration:none;}
 body{margin:0 auto;font-family: 'source_sans_proregular';font-size:16px;}
 .container{margin:0 auto;max-width:800px;padding:0 15px;}
 header{position:absolute;top:22px;left:0;width:100%;}
+.error{color: red;}
 .logo{float:left;width:50%;}
 .login{float:right;width:auto;padding:20px 0;}
 .login a{color:#fff;}
@@ -10,7 +11,7 @@ header{position:absolute;top:22px;left:0;width:100%;}
 #react{float:left;width:100%;height:100%;}
 .wrapper{float:left;width:100%;height:100%;}
 .wrap{float:left;width:100%;height:100%;}
-.top_banner{float:left;width:100%;background-image:url('../images/bannerimage.png');height:100%;background-repeat:no-repeat;background-size:cover;}
+.top_banner{float:left;width:100%;background-image:url('../images/bannerimage.png');height:100%;background-repeat:no-repeat;background-size:cover; margin-top: 100px;}
 .top_banner .container{height:100%;}
 .table-div{display:table;width:100%;height:100%;text-align:center;}
 .table-cell{display:table-cell;width:100%;height:100%;vertical-align: middle;}
